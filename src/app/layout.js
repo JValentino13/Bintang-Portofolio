@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono, Poppins, Figtree } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/themeContext";
+import Navbar from "@/components/navbar";
+import PageTransition from "@/components/pageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -40,7 +41,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-poppins select-none">
         <ThemeProvider>
           <Navbar/>
-          {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
         </ThemeProvider>
         </body>
     </html>
