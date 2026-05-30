@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: var(--font-poppins);
+  --font-figtree: var(--font-figtree);
+  --font-geist: var(--font-geist);
+}
+
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;
+}
